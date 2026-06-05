@@ -8,8 +8,6 @@ on:
     
 jobs:
   build:
-    container:
-      image: docker:29.5.3-dind-rootless
     runs-on: ubuntu-24.04-arm
     steps:
       - uses: actions/checkout@v5
