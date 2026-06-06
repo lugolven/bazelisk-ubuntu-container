@@ -8,4 +8,4 @@ BAZELISK_VERSION=$(bazel version | grep "Bazelisk version:" | egrep -o '[0-9]+\.
 echo "Getting the Ubuntu version" >&2 
 UBUNTU_VERSION=$(cat /etc/os-release | grep VERSION_ID | cut -d= -f2 | tr -d '"')
 
-echo -n "$UBUNTU_VERSION-$BAZELISK_VERSION"
+echo -n "$BAZELISK_VERSION-ubuntu$UBUNTU_VERSION"
