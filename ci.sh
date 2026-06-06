@@ -22,7 +22,7 @@ TAG_IMAGE_ID=$(docker build . --target tag --iidfile /tmp/image-id && cat /tmp/i
 echo "::endgroup::"
 
 echo "::group::Generating the tag for the image..."
-TAG=$(docker run --rm $TAG_IMAGE_ID)${PR_ID:+-$PR_ID}
+TAG=$(docker run --rm $TAG_IMAGE_ID)${PR_ID:+-pr$PR_ID}
 echo "Tag: $TAG"
 echo "::endgroup::"
 
@@ -33,5 +33,3 @@ echo "::endgroup::"
 echo "::group::Publishing the image..."
 docker push "$REGISTRY:$TAG"
 echo "::endgroup::"
-
-
