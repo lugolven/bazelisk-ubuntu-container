@@ -1,8 +1,8 @@
 module build-tools
 
-go 1.24.0
+go 1.27.3
 
-require github.com/bazelbuild/bazelisk v1.29.0
+require github.com/bazelbuild/bazelisk v1.30.0
 
 require (
 	github.com/bgentry/go-netrc v0.0.0-20140422174119-9fd32a8b3d3d // indirect
